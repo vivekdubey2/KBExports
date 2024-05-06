@@ -301,29 +301,36 @@ all_season_pivot = process_data_exporter(all_season)
 mk_pivot = process_data_exporter(mk)
 
 
+
+
+
+
 # Save pivot table to Excel Importer
 with pd.ExcelWriter(r'D:\UserProfile\Desktop\MIS\March\FOREIGN_IMPORTER_REPORT.xlsx',engine="xlsxwriter") as writer:
     flamingo_pivot.to_excel(writer,sheet_name='Flamingo')
-    wealmoor_pivot.to_excel(writer,sheet_name='Wealmoor')
-    mww_pivot.to_excel(writer,sheet_name='MWW')
-    nature_pivot.to_excel(writer,sheet_name='Nature Pride')
-    yukon_pivot.to_excel(writer,sheet_name='Yukoon')
-    rajafood_pivot.to_excel(writer,sheet_name='Rajafood')
+
+
+    
+    # wealmoor_pivot.to_excel(writer,sheet_name='Wealmoor')
+    # mww_pivot.to_excel(writer,sheet_name='MWW')
+    # nature_pivot.to_excel(writer,sheet_name='Nature Pride')
+    # yukon_pivot.to_excel(writer,sheet_name='Yukoon')
+    # rajafood_pivot.to_excel(writer,sheet_name='Rajafood')
     
 # #indian_exporter_report_export_in_excel
-with pd.ExcelWriter(r'D:\UserProfile\Desktop\MIS\March\INDIAN_EXPORTER_REPORT.xlsx',engine="xlsxwriter") as writer:
-    namdhari_pivot.to_excel(writer,sheet_name='NAMDHARI')
-    kb_pivot.to_excel(writer,sheet_name='KAY BEE')
-    dehat_pivot.to_excel(writer,sheet_name="DEHAT")
-    vashini_pivot.to_excel(writer,sheet_name="vashini")
-    magnus_pivot.to_excel(writer,sheet_name="MAGNUS")
-    baramati_pivot.to_excel(writer,sheet_name="BARAMATI")
-    ulink_pivot.to_excel(writer,sheet_name="ULINK")
-    kashi_pivot.to_excel(writer,sheet_name="KASHI EXPORTS")
-    khushi_pivot.to_excel(writer,sheet_name="KHUSHI INTERNATIONAL")
-    go_green_pivot.to_excel(writer,sheet_name="GO GREEN")
-    three_circle_pivot.to_excel(writer,sheet_name="THREE CIRCLES")
-    all_season_pivot.to_excel(writer,sheet_name="ALL SEASONS")
-    mk_pivot.to_excel(writer,sheet_name="MK EXPORTS")
+# with pd.ExcelWriter(r'D:\UserProfile\Desktop\MIS\March\INDIAN_EXPORTER_REPORT.xlsx',engine="xlsxwriter") as writer:
+#     namdhari_pivot.to_excel(writer,sheet_name='NAMDHARI')
+#     kb_pivot.to_excel(writer,sheet_name='KAY BEE')
+#     dehat_pivot.to_excel(writer,sheet_name="DEHAT")
+#     vashini_pivot.to_excel(writer,sheet_name="vashini")
+#     magnus_pivot.to_excel(writer,sheet_name="MAGNUS")
+#     baramati_pivot.to_excel(writer,sheet_name="BARAMATI")
+#     ulink_pivot.to_excel(writer,sheet_name="ULINK")
+#     kashi_pivot.to_excel(writer,sheet_name="KASHI EXPORTS")
+#     khushi_pivot.to_excel(writer,sheet_name="KHUSHI INTERNATIONAL")
+#     go_green_pivot.to_excel(writer,sheet_name="GO GREEN")
+#     three_circle_pivot.to_excel(writer,sheet_name="THREE CIRCLES")
+#     all_season_pivot.to_excel(writer,sheet_name="ALL SEASONS")
+#     mk_pivot.to_excel(writer,sheet_name="MK EXPORTS")
     
 
